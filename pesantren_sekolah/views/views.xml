@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="pesantren_sekolah.list">
+      <field name="name">PesantrenSekolah list</field>
+      <field name="model">pesantren_sekolah.pesantren_sekolah</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="pesantren_sekolah.action_window">
+      <field name="name">PesantrenSekolah window</field>
+      <field name="res_model">pesantren_sekolah.pesantren_sekolah</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="pesantren_sekolah.action_server">
+      <field name="name">PesantrenSekolah server</field>
+      <field name="model_id" ref="model_pesantren_sekolah_pesantren_sekolah"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Sekolah" id="pesantren_sekolah.menu_root" web_icon="pesantren_sekolah,static/description/icon.png"/>
+    <menuitem name="Siswa" id="pesantren_sekolah.menu_1" sequence="0">
+        <menuitem name="Data Siswa" id="pesantren_sekolah.menu_data_siswa" action="action_data_siswa"/>
+    </menuitem>
+    
+    <menuitem name="Cari Siswa" id="pesantren_sekolah.menu_search" parent="pesantren_sekolah.menu_root" action="action_siswa_search_wizard"/>
+
+    <!-- Jika ingin mengaktifkan menu ini, hapus komentar berikut -->
+    <!-- 
+    <menuitem name="Data Santri" id="pesantren_guru_quran.menu_2">
+        <menuitem name="Cek Santri" id="pesantren_guru_quran.menu_cek_santri" action="pesantren_guru_quran.action_server"/>
+    </menuitem>
+    -->
+</odoo>

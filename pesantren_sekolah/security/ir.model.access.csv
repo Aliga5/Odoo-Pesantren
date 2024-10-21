@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pesantren_sekolah_pesantren_sekolah,pesantren_sekolah.pesantren_sekolah,model_pesantren_sekolah_pesantren_sekolah,base.group_user,1,1,1,1
+access_siswa_search_wizard_manager,siswa_search_wizard_manager,model_siswa_search_wizard,,1,1,1,1
