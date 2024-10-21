@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Orang Tua" id="pesantren_orang_tua.menu_root" web_icon="pesantren_orang_tua,static/description/icon.png">
+        <menuitem name="Akademik" id="pesantren_orang_tua.menu_1">
+            <menuitem name="Absensi Siswa" id="pesantren_orang_tua.menu_1_absensi" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Nilai Siswa" id="pesantren_orang_tua.menu_1_nilai" action="pesantren_orang_tua.action_window"/>
+        </menuitem>
+        <menuitem name="Kesantrian" id="pesantren_orang_tua.menu_2">
+            <menuitem name="Ajukan Izin" id="pesantren_orang_tua.menu_2_izin" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Tahfidz" id="pesantren_orang_tua.menu_2_tahfidz">
+                <menuitem name="Tahfidz" id="pesantren_orang_tua.menu_2_tahfidz_detail" action="pesantren_orang_tua.action_window"/>
+            </menuitem>
+            <menuitem name="Tahsin" id="pesantren_orang_tua.menu_2_tahsin">
+                <menuitem name="Tahsin" id="pesantren_orang_tua.menu_2_tahsin_detail" action="pesantren_orang_tua.action_window"/>
+            </menuitem>
+            <menuitem name="Mutabaah Harian" id="pesantren_orang_tua.menu_2_mutabaah" action="pesantren_orang_tua.action_window"/>
+        </menuitem>
+        <menuitem name="Aktivitas" id="pesantren_orang_tua.menu_3">
+            <menuitem name="Pelanggaran" id="pesantren_orang_tua.menu_3_pelanggaran" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Kesehatan" id="pesantren_orang_tua.menu_3_kesehatan" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Prestasi Siswa" id="pesantren_orang_tua.menu_3_prestasi" action="pesantren_orang_tua.action_window"/>
+        </menuitem>
+        <menuitem name="Keuangan" id="pesantren_orang_tua.menu_4">
+            <menuitem name="Tagihan" id="pesantren_orang_tua.menu_4_tagihan" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Pembayaran" id="pesantren_orang_tua.menu_4_pembayaran" action="pesantren_orang_tua.action_window"/>
+        </menuitem>
+        <menuitem name="Informasi" id="pesantren_orang_tua.menu_5">
+            <menuitem name="Data Siswa" id="pesantren_orang_tua.menu_5_data_siswa" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Orang Tua" id="pesantren_orang_tua.menu_5_orang_tua" action="pesantren_orang_tua.action_window"/>
+            <menuitem name="Pengumuman" id="pesantren_orang_tua.menu_5_pengumuman" action="pesantren_orang_tua.action_window"/>
+        </menuitem>
+    </menuitem>
+</odoo>

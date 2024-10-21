@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pesantren_orang_tua_pesantren_orang_tua,pesantren_orang_tua.pesantren_orang_tua,model_pesantren_orang_tua_pesantren_orang_tua,base.group_user,1,1,1,1
