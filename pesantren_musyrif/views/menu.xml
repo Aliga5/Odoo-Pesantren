@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menu Musyrif -->
+    <menuitem name="Musyrif" id="pesantren_musyrif.menu_root" web_icon="pesantren_musyrif,static/description/icon.png">
+        <menuitem name="Perizinan Santri" id="pesantren_musyrif.menu_1">
+            <menuitem name="Ijin Santri" id="pesantren_musyrif.menu_1_ijin" action="pesantren_musyrif_ijin.action_window"/>
+        </menuitem>
+        <menuitem name="Aktivitas" id="pesantren_musyrif.menu_2">
+            <menuitem name="Pelanggaran" id="pesantren_musyrif.menu_2_pelanggaran" action="pesantren_musyrif.action_window"/>
+            <menuitem name="Kondisi Kesehatan" id="pesantren_musyrif.menu_2_kesehatan" action="pesantren_musyrif.action_window"/>
+            <menuitem name="Prestasi Santri" id="pesantren_musyrif.menu_2_prestasi" action="pesantren_musyrif.action_window"/>
+            <menuitem name="Mutabaah Harian" id="pesantren_musyrif.menu_2_mutabaah" action="pesantren_musyrif.action_window"/>
+        </menuitem>
+        <menuitem name="Data Santri" id="pesantren_musyrif.menu_3">
+            <menuitem name="Cek Santri" id="pesantren_musyrif.menu_3_cek" action="pesantren_musyrif.action_server"/>
+            <menuitem name="Uang Saku Santri" id="pesantren_musyrif.menu_3_uang_saku" action="pesantren_musyrif.action_server"/>
+            <menuitem name="Transaksi Dompet Santri" id="pesantren_musyrif.menu_3_dompet" action="pesantren_musyrif.action_server"/>
+        </menuitem>
+    </menuitem>
+</odoo>
