@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Guru Quran" id="pesantren_guru_quran.menu_root"  web_icon="pesantren_guru_quran,static/description/icon.png">
+        <menuitem name="Kepesantrenan" id="pesantren_guru_quran.menu_1">
+            <menuitem name="Tahfidz" id="pesantren_guru_quran.menu_tahfidz">
+                <menuitem name="Absen Tahfidz" id="pesantren_guru_quran.menu_tahfidz_absen" action="pesantren_guru_quran.action_absensi_siswa_tahfidz"/>
+                <menuitem name="Tahfidz Alquran" id="pesantren_guru_quran.menu_tahfidz_alquran" action="pesantren_guru_quran.action_window"/>
+            </menuitem>
+            <menuitem name="Tahsin" id="pesantren_guru_quran.menu_tahsin">
+                <menuitem name="Absen Tahsin" id="pesantren_guru_quran.menu_tahsin_absen" action="pesantren_guru_quran.action_absensi_siswa_tahsin"/>
+                <menuitem name="Tahsin Alquran" id="pesantren_guru_quran.menu_tahsin_alquran" action="pesantren_guru_quran.action_window"/>
+            </menuitem>
+        </menuitem>
+        <menuitem name="Data Santri" id="pesantren_guru_quran.menu_2">
+            <menuitem name="Cek Santri" id="pesantren_guru_quran.menu_cek_santri" action="pesantren_guru_quran.action_server"/>
+        </menuitem>
+    </menuitem>
+</odoo>

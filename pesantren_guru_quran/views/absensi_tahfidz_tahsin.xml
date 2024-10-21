@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action for Absensi Siswa Tahfidz -->
+        <record id="action_absensi_siswa_tahfidz" model="ir.actions.act_window">
+            <field name="name">Absensi Siswa Tahfidz</field>
+            <field name="res_model">guru.absensi_tahfidz</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Action for Absensi Siswa Tahsin -->
+        <record id="action_absensi_siswa_tahsin" model="ir.actions.act_window">
+            <field name="name">Absensi Siswa Tahsin</field>
+            <field name="res_model">guru.absensi_tahsin</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Form View for Absensi Siswa Tahfidz -->
+        <record id="view_absensi_siswa_tahfidz_form" model="ir.ui.view">
+            <field name="name">absensi.siswa.tahfidz.form</field>
+            <field name="model">guru.absensi_tahfidz</field>
+            <field name="arch" type="xml">
+                <form string="Absensi Siswa Tahfidz">
+                    <field name="status" widget="statusbar"/>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="tanggal"/>
+                                <field name="sesi_id"/>
+                                <field name="keterangan"/>
+                            </group>
+                            <group>
+                                <field name="halaqoh"/>
+                                <field name="tahun_ajaran_id"/>
+                                <field name="guru_id"/>
+                            </group>
+                            <notebook>
+                                <page string="Daftar Halaqoh">
+                                    <group>
+                                        <field name="absen_tahfidz_list" widget="one2many_list">
+                                            <list editable="bottom">
+                                                <field name="siswa_id"/>
+                                                <field name="nis"/>
+                                                <field name="kehadiran"/>
+                                            </list>
+                                        </field>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View for Absensi Siswa Tahfidz -->
+        <record id="view_absensi_siswa_tahfidz_list" model="ir.ui.view">
+            <field name="name">absensi.siswa.tahfidz.list</field>
+            <field name="model">guru.absensi_tahfidz</field>
+            <field name="arch" type="xml">
+                <list string="Absensi Siswa Tahfidz">
+                    <field name="tanggal"/>
+                    <field name="sesi_id"/>
+                    <field name="halaqoh"/>
+                    <field name="siswa_id"/>
+                    <field name="kehadiran"/>
+                    <field name="status"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for Absensi Siswa Tahsin -->
+        <record id="view_absensi_siswa_tahsin_form" model="ir.ui.view">
+            <field name="name">absensi.siswa.tahsin.form</field>
+            <field name="model">guru.absensi_tahsin</field>
+            <field name="arch" type="xml">
+                <form string="Absensi Siswa Tahsin">
+                    <field name="status" widget="statusbar"/>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="tanggal"/>
+                                <field name="tahun_ajaran_id"/>
+                            </group>
+                            <group>
+                                <field name="halaqoh"/>
+                                <field name="guru_id"/>
+                            </group>
+                            <notebook>
+                                <page string="Daftar Halaqoh">
+                                    <group>
+                                        <field name="absen_tahsin_list" widget="one2manylist">
+                                            <list editable="bottom">
+                                                <field name="siswa_id"/>
+                                                <field name="nis"/>
+                                                <field name="kehadiran"/>
+                                            </list>
+                                        </field>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View for Absensi Siswa Tahsin -->
+        <record id="view_absensi_siswa_tahsin_list" model="ir.ui.view">
+            <field name="name">absensi.siswa.tahsin.list</field>
+            <field name="model">guru.absensi_tahsin</field>
+            <field name="arch" type="xml">
+                <list string="Absensi Siswa Tahsin">
+                    <field name="tanggal"/>
+                    <field name="halaqoh"/>
+                    <field name="siswa_id"/>
+                    <field name="kehadiran"/>
+                    <field name="status"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

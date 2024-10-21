@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pesantren_guru_quran_pesantren_guru_quran,pesantren_guru_quran.pesantren_guru_quran,model_pesantren_guru_quran_pesantren_guru_quran,base.group_user,1,1,1,1
+access_absensi_siswa_tahfidz,guru_absensi_tahfidz,model_guru_absensi_tahfidz,base.group_user,1,1,1,1
+access_absensi_siswa_tahsin,guru_absensi_tahsin,model_guru_absensi_tahsin,base.group_user,1,1,1,1
