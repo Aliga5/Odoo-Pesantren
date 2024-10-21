@@ -1,0 +1,72 @@
+<odoo>
+    <!-- Form View for Absensi Siswa -->
+    <record id="view_absensi_siswa_form" model="ir.ui.view">
+        <field name="name">absensi.siswa.form</field>
+        <field name="model">guru.absensi_siswa</field>
+        <field name="arch" type="xml">
+            <form string="Absensi Siswa">
+                <group>
+                    <field name="tanggal"/>
+                    <field name="kelas_id"/>
+                    <group string="Aktivitas Pelajaran">
+                        <group>
+                            <field name="hari"/>
+                            <field name="jam_ke"/>
+                        </group>
+                        <group>
+                            <field name="mata_pelajaran_id"/>
+                            <field name="guru_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Absensi Siswa">
+                            <group colspan="4">
+                                <list editable="bottom">
+                                    <field name="siswa_id"/>
+                                    <field name="nis"/>
+                                    <field name="kehadiran"/>
+                                </list>
+                            </group>
+                        </page>
+                        <page string="Materi">
+                            <group>
+                                <field name="pertemuan_ke"/>
+                                <field name="tema"/>
+                                <field name="materi"/>
+                                <field name="rpp"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View for Absensi Siswa -->
+    <record id="view_absensi_siswa_list" model="ir.ui.view">
+        <field name="name">absensi.siswa.list</field>
+        <field name="model">guru.absensi_siswa</field>
+        <field name="arch" type="xml">
+            <list string="Absensi Siswa">
+                <field name="tanggal"/>
+                <field name="kelas_id"/>
+                <field name="hari"/>
+                <field name="jam_ke"/>
+                <field name="mata_pelajaran_id"/>
+                <field name="guru_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action for Absensi Siswa -->
+    <record id="action_absensi_siswa" model="ir.actions.act_window">
+        <field name="name">Absensi Siswa</field>
+        <field name="res_model">guru.absensi_siswa</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Klik untuk membuat Absensi Siswa baru.
+            </p>
+        </field>
+    </record>
+</odoo>

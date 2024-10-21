@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+    <!-- Main menu for Guru -->
+    <menuitem name="Guru" id="guru.menu_guru" sequence="10"/>
+
+    <!-- Submenu under Guru -->
+    <menuitem id="guru.menu_aktifitas" name="Aktivitas" parent="guru.menu_guru" sequence="20"/>
+    
+    <!-- Absensi Siswa submenu under Aktivitas -->
+    <menuitem id="menu_absensi_siswa" name="Absensi Siswa" action="action_absensi_siswa" parent="guru.menu_aktifitas" sequence="30"/>
+    
+    <!-- Uncomment the following as necessary -->
+    <!-- 
+    <menuitem id="menu_penugasan" name="Penugasan" action="action_penugasan_siswa" parent="guru.menu_aktifitas" sequence="40"/>
+    <menuitem id="Penilaian_siswa" name="Penilaian" parent="guru.menu_aktifitas" sequence="50">
+        <menuitem id="menu_penilaian_siswa" name="Penilaian" action="action_penilaian" sequence="60"/>
+        <menuitem id="menu_penilaian_guru_siswa" name="Penilaian AKhir (Guru)" action="action_penilaian_guru" sequence="70"/>
+        <menuitem id="menu_penilaian_wali_siswa" name="Penilaian Akhir (Wali Kelas)" action="action_penilaian_wali_kelas" sequence="80"/>
+    </menuitem>
+    -->
+    
+    <!-- Uncomment Pengaturan section if needed -->
+    <!-- 
+    <menuitem id="guru.pengaturan" name="Pengaturan" parent="guru.menu_guru" sequence="90"/>
+    -->
+  </data>
+</odoo>

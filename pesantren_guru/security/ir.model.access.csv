@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_absensi_siswa,guru.absensi_siswa,model_guru_absensi_siswa,base.group_user,1,1,1,1
+access_jam_pelajaran,guru.jam_pelajaran,model_guru_jam_pelajaran,base.group_user,1,1,1,1
