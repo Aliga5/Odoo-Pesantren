@@ -1,0 +1,77 @@
+<odoo>
+    <data>
+
+        <!-- Action untuk membuka form view pesantren.santri -->
+        <!-- <record id="pesantren.action_santri" model="ir.actions.act_window">
+            <field name="name">Santri Form</field>
+            <field name="res_model">pesantren.santri</field>
+            <field name="view_mode">kanban,form,list</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                Buatlah data santri baru di sini.
+                </p>
+            </field>
+        </record> -->
+
+        <!-- Form view untuk pesantren.santri -->
+        <!-- <record id="view_form_pesantren_santri" model="ir.ui.view">
+            <field name="name">pesantren.santri.form</field>
+            <field name="model">pesantren.santri</field>
+            <field name="arch" type="xml">
+                <form string="Santri">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Nama Lengkap Siswa" required="1"/>
+                                <field name="no_induk" string="Nomor Induk" required="1"/>
+                                <field name="birthdate" string="Tanggal Lahir" required="1"/>
+                                <field name="address" string="Alamat Rumah"/>
+                                <field name="provinsi_id" string="Provinsi"/>
+                                <field name="city" string="Kota" required="1"/>
+                            </group>
+                            <group>
+                                <field name="gender" string="Jenis Kelamin" required="1"/>
+                                <field name="phone" string="No. Telepon"/>
+                                <field name="email" string="Email"/>
+                                <field name="kelas_id" string="Kelas"/>
+                                <field name="kamar_id" string="Kamar"/>
+                                <field name="pengurus_id" string="Pengurus"/>
+                                <field name="status_aktif" string="Status Aktif"/>
+                            </group>
+                        </group> -->
+
+                        <!-- Foto Field -->
+                        <!-- <group>
+                            <field name="foto" widget="image" class="oe_avatar" string="Foto" required="0"/>
+                        </group> -->
+
+                        <!-- Additional tab for 'Wali Santri' -->
+                        <!-- <notebook>
+                            <page string="Orang Tua">
+                                <group>
+                                    <field name="wali_id" string="Wali Santri"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record> -->
+
+
+        <!-- list view untuk pesantren.santri -->
+        <!-- <record id="view_list_pesantren_santri" model="ir.ui.view">
+            <field name="name">pesantren.santri.list</field>
+            <field name="model">pesantren.santri</field>
+            <field name="arch" type="xml">
+                <list string="Santri">
+                    <field name="name"/>
+                    <field name="no_induk"/>
+                    <field name="birthdate"/>
+                    <field name="city"/>
+                    <field name="kelas_id"/>
+                </list>
+            </field>
+        </record> -->
+    </data>
+</odoo>

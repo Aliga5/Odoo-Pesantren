@@ -1,0 +1,146 @@
+<odoo>
+    <!-- Definisi report -->
+    <record id="action_kanban_print" model="ir.actions.report">
+        <field name="name">Pesantren Print</field>
+        <field name="model">pesantren.santri</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">pesantren.kts_template</field>        <!-- Sesuaikan dengan nama template -->
+    </record>
+
+    <!-- Template QWeb untuk cetak kartu santri -->
+    <template id="kts_template">
+        <t t-name="pesantren.kts_template">
+            <div class="page" style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+                <main>
+                    <t t-if="docs">
+                        <t t-foreach="docs" t-as="o">
+                            <!-- Kartu Depan -->
+                            <div style="width: 450px; height: 250px; background-color: #246602; border-radius: 15px; color: white; margin: 20px auto; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <div style="overflow: hidden;">
+                                    <div style="float: left;">
+                                        <p style="text-transform: uppercase; font-size: 12px;">PONDOK PESANTREN Al-Falah Ploso</p>
+                                        <p style="font-size: 10px;">Ds. Ploso Kec.Mojo Kediri</p>
+                                    </div>
+                                    <div style="float: right;">
+                                        <img src="https://alfalahploso.net/wp-content/uploads/2019/05/ploso.jpg" style="width: 50px; border-radius: 50%;" alt="Logo Pondok"/>
+                                    </div>
+                                </div>
+
+                                <!-- Judul -->
+                                <div style="clear: both; text-align: center; margin-top: 10px; font-weight: bold; font-size: 18px;">
+                                    KARTU TANDA SANTRI
+                                </div>
+
+                                <!-- Data Santri -->
+                                <div style="overflow: hidden; margin-top: 5px;">
+                                    <div style="float: left;">
+                                        <img t-att-src="image_data_uri(o.foto)" t-if="o.foto" alt="Foto Santri" style="width: 90px; height: 120px; border-radius: 5px; object-fit: cover; border: 2px solid #fff;"/>
+                                    </div>
+                                    <div style="float: left; font-size: 14px; padding-left: 10px; color: white;">
+                                        <p>
+                                            <strong>No. Induk:</strong>
+                                            <t t-esc="o.no_induk"/>
+                                        </p>
+                                        <p>
+                                            <strong>Nama:</strong>
+                                            <t t-esc="o.name"/>
+                                        </p>
+                                        <p>
+                                            <strong>TTL:</strong>
+                                            <t t-esc="o.city"/>
+ ,
+                                            <t t-esc="o.birthdate"/>
+                                        </p>
+                                        <p>
+                                            <strong>Alamat:</strong>
+                                            <t t-esc="o.address"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kartu Belakang -->
+                            <div style="width: 450px; height: 250px; background-color: #246602; border-radius: 15px; color: white; margin: 20px auto; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <div style="float: left; font-size: 10px; width: 70%; background-color: white; color: black; padding: 10px; border-radius: 10px;">
+                                    <p>
+                                        <strong>Janji Santri</strong>
+                                    </p>
+                                    <ol type="1">
+                                        <li>Meningkatkan keimanan dan ketakwaan kepada Allah SWT dan Rasul-Nya.</li>
+                                        <li>Patuh dan berbakti kepada guru dan kedua orang tua.</li>
+                                        <li>Mentaati semua peraturan/tata tertib Ponpes Al-falah Ploso.</li>
+                                        <li>Menerima sanksi/hukuman jika melanggar peraturan.</li>
+                                        <li>Menjaga serta membela nama baik almamater Ponpes Al-falah Ploso.</li>
+                                        <li>Berani berkorban demi agama dan negara.</li>
+                                    </ol>
+                                </div>
+                                <div style="float: right; background-color: white; border-radius: 8px; padding: 3px;">
+                                <!-- <img t-att-src="'/report/barcode/?type=QR&amp;value=' + o.no_induk + '&amp;width=200&amp;height=200'" style="width: 200px; height: 200px;" alt="QR Code"/> -->
+                                <img t-att-src="'/report/barcode/QR/'+o.no_induk" style="height:150px; width:150px;" alt="QR Code"/>
+                                </div>
+
+                            </div>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <!-- Kartu Depan (Jika tidak ada data) -->
+                        <div style="width: 450px; height: 250px; background-color: #246602; border-radius: 15px; color: white; margin: 20px auto; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <!-- Header -->
+                            <div style="overflow: hidden;">
+                                <div style="float: left;">
+                                    <p style="text-transform: uppercase; font-size: 12px;">PONDOK PESANTREN Al-Falah Ploso</p>
+                                    <p style="font-size: 10px;">Ds. Ploso Kec.Mojo Kediri</p>
+                                </div>
+                                <div style="float: right;">
+                                    <img src="https://alfalahploso.net/wp-content/uploads/2019/05/ploso.jpg" style="width: 50px; border-radius: 50%;" alt="Logo Pondok"/>
+                                </div>
+                            </div>
+
+                            <!-- Judul -->
+                            <div style="clear: both; text-align: center; margin-top: 10px; font-weight: bold; font-size: 18px;">
+                                KARTU TANDA SANTRI
+                            </div>
+
+                            <!-- Data Santri -->
+                            <div style="overflow: hidden; margin-top: 15px;">
+                                <div style="float: left;">
+                                    <img src="https://www.berjutapena.or.id/wp-content/uploads/2023/10/a3003e22-0c75-48d3-bfe5-595672269def.jpeg" alt="Foto Santri" style="width: 90px; height: 120px; border-radius: 5px; object-fit: cover; border: 2px solid #fff;"/>
+                                </div>
+                                <div style="float: left; font-size: 14px; padding-left: 10px; color: white;">
+                                    <p>
+                                        <strong>No. Induk:</strong> 0123456789</p>
+                                    <p>
+                                        <strong>Nama:</strong> Fulan Santri Soleh</p>
+                                    <p>
+                                        <strong>TTL:</strong> Bojonegoro, 09-08-2009</p>
+                                    <p>
+                                        <strong>Alamat:</strong> Padangan, BJN</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kartu Belakang (Jika tidak ada data) -->
+                        <div style="width: 450px; height: 250px; background-color: #246602; border-radius: 15px; color: white; margin: 20px auto; padding: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <div style="float: left; font-size: 10px; width: 70%; background-color: white; color: black; padding: 10px; border-radius: 10px;">
+                                <p>
+                                    <strong>Janji Santri</strong>
+                                </p>
+                                <ol type="1">
+                                    <li>Meningkatkan keimanan dan ketakwaan kepada Allah SWT dan Rasul-Nya.</li>
+                                    <li>Patuh dan berbakti kepada guru dan kedua orang tua.</li>
+                                    <li>Mentaati semua peraturan/tata tertib Ponpes Al-falah Ploso.</li>
+                                    <li>Menerima sanksi/hukuman jika melanggar peraturan.</li>
+                                    <li>Menjaga serta membela nama baik almamater Ponpes Al-falah Ploso.</li>
+                                    <li>Berani berkorban demi agama dan negara.</li>
+                                </ol>
+                            </div>
+                            <div style="float: right; width: 95px; height: 95px; background-color: white; border-radius: 8px;">
+                                <!-- Barcode bisa ditambahkan di sini -->
+                            </div>
+                        </div>
+                    </t>
+                </main>
+            </div>
+        </t>
+    </template>
+</odoo>

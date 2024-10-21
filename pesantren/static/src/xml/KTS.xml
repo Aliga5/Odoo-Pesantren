@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="custom_kanban_template">
+    <t t-name="custom.kanban.view">
+        <div class="kanban-view-custom">
+            <h1>Custom Kanban Template</h1>
+            <p>This is a custom kanban template for displaying partner data.</p>
+        </div>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Top menu item -->
+
+        <menuitem name="Pesantren" id="pesantren.menu_root" web_icon="pesantren,static/description/icon.png">
+            <menuitem name="Data Kesantrian" id="pesantren.menu_data_kesantrian">
+                <menuitem id="pesantren.menu_santri" name="Santri" action="pesantren.action_santri"/>
+                <menuitem id="pesantren.sub_menu_musyrif" name="Musyrif" action="action_pengurus"/>
+                <menuitem id="pesantren.sub_menu_guru" name="Guru" action="action_guru"/>
+                <menuitem id="pesantren.sub_menu_guru_quran" name="Guru Quran"/>
+                <menuitem id="pesantren.sub_menu_wali_santri" name="Wali Santri" action="action_wali"/>
+            </menuitem>
+
+            <menuitem id="pesantren.menu_kepesantrenan" name="Kepesantrenan">
+                <menuitem id="pesantren.menu_perizinan" name="Perizinan"/>
+                <menuitem id="Category_kepesantrenan_tahfidz" name="Tahfidz">
+                    <menuitem id="pesantren.menu_absen_tahfidz" name="Absen Tahfidz"/>
+                    <menuitem id="pesantren.menu_tahfidz_alquran" name="Tahfidz Alquran"/>
+                </menuitem>
+                <menuitem id="Category_kepesantrenan_tahsin" name="Tahsin">
+                    <menuitem id="pesantren.menu_absen_tahsin" name="Absen Tahsin" />
+                    <menuitem id="pesantren.menu_tahsin_alquran" name="Tahsin Alquran"/>
+                </menuitem>
+                <menuitem id="Category_mutabaah_harian" name="Mutabaah Harian">
+                    <menuitem id="pesantren.menu_mutabaah_harian" name="Mutabaah Harian" />
+                </menuitem>
+            </menuitem>
+
+            <menuitem id="pesantren.menu_atifitas" name="Ativitas">
+                <menuitem id="pesantren.menu_prestasi" name="Prestasi" action="action_pelanggaran"/>
+                <!-- <menuitem id="pesantren.menu_kesehatan_siswa" name="Kesehatan Siswa" action="action_kesehatan"/>
+                <menuitem id="pesantren.menu_prestasi_siswa" name="Prestasi Siswa" action="action_prestasi_siswa"/> -->
+            </menuitem>
+
+            <menuitem id="pesantren.menu_pengaturan" name="Pengaturan">
+                <menuitem id="Category_daerah" name="Daerah">
+                    <menuitem id="pesantren.menu_provinsi" name="Provinsi" action="action_provinsi"/>
+                    <menuitem id="pesantren.menu_kota" name="Kota" action="action_kota"/>
+                    <menuitem id="pesantren.menu_kecamatan" name="Kecamatan" action="action_kecamatan"/>
+                </menuitem>
+                <menuitem id="Category_tahfidz" name="Tahfidz">
+                    <menuitem id="pesantren.menu_quran" name="Quran" action="action_quran"/>
+                    <menuitem id="pesantren.menu_hadits" name="Daftar Hadits" action="action_hadist"/>
+                    <menuitem id="pesantren.menu_nilai" name="Nilai Tahfidz" action="action_nilai"/>
+                    <menuitem id="pesantren.menu_sesi" name="Sesi Tahfidz" action="action_sesi"/>
+                </menuitem>
+                <menuitem id="Category_tahsin" name="Tahsin">
+                    <menuitem id="pesantren.menu_tahsin" name="Buku tahsin" action="action_tahsin"/>
+                </menuitem>
+                <menuitem id="Category_kepengasuhan" name="Kepengasuhan">
+                    <menuitem id="pesantren.menu_mutabaah" name="Mutabaah" action="action_mutabaah"/>
+                    <menuitem id="pesantren.menu_kategory_mutabaah" name="Kategory Mutabaah" action="action_mutabaah_kategory"/>
+                    <menuitem id="pesantren.menu_sesi_mutabaah" name="Sesi Mutabaah" action="action_mutabaah_sesi"/>
+                    <menuitem id="pesantren.menu_tindakan" name="Tindakan Pelanggaran" action="action_hukuman"/>
+                </menuitem>
+                <menuitem id="Category_pelanggaran" name="Pelanggaran">
+                    <menuitem id="pesantren.menu_jenis_pelanggaran" name="Jenis Pelanggaran" action="action_kategori_pelanggaran"/>
+                    <menuitem id="pesantren.menu_data_pelanggaran" name="Data Pelanggaran" action="action_data_pelanggaran"/>
+                </menuitem>
+                <menuitem id="Category_kamar_halaqoh" name="Kamar Halaqoh">
+                    <menuitem id="pesantren.menu_pembagian_halaqoh" name="Pembagian Halaqoh"/>
+                    <menuitem id="pesantren.menu_pembagian_kamar" name="Pembagian Kamar Santri"/>
+                </menuitem>
+                <menuitem id="Category_prestasi" name="Prestasi">
+                    <menuitem id="pesantren.menu_jenis_prestasi" name="Jenis Prestasi"/>
+                </menuitem>
+            </menuitem>
+        </menuitem>
+    </data>
+</odoo>

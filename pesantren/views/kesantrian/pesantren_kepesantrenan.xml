@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action dan List View untuk Data Pelanggaran -->
+        <record id="view_list_data_pelanggaran" model="ir.ui.view">
+            <field name="name">data.pelanggaran.list</field>
+            <field name="model">pesantren.data.pelanggaran</field>
+            <field name="arch" type="xml">
+                <list string="Data Pelanggaran">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_data_pelanggaran" model="ir.actions.act_window">
+            <field name="name">Data Pelanggaran</field>
+            <field name="res_model">pesantren.data.pelanggaran</field>
+            <field name="view_mode">list</field>
+        </record>
+
+        <!-- Action dan List View untuk Kategori Pelanggaran -->
+        <record id="view_list_kategori_pelanggaran" model="ir.ui.view">
+            <field name="name">kategori.pelanggaran.list</field>
+            <field name="model">pesantren.kategori.pelanggaran</field>
+            <field name="arch" type="xml">
+                <list string="Kategori Pelanggaran">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_kategori_pelanggaran" model="ir.actions.act_window">
+            <field name="name">Kategori Pelanggaran</field>
+            <field name="res_model">pesantren.kategori.pelanggaran</field>
+            <field name="view_mode">list</field>
+        </record>
+
+        <!-- Action dan List View untuk Hukuman -->
+        <record id="view_list_hukuman" model="ir.ui.view">
+            <field name="name">hukuman.list</field>
+            <field name="model">pesantren.hukuman</field>
+            <field name="arch" type="xml">
+                <list string="Hukuman">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_hukuman" model="ir.actions.act_window">
+            <field name="name">Data Hukuman</field>
+            <field name="res_model">pesantren.hukuman</field>
+            <field name="view_mode">list</field>
+        </record>
+
+        <!-- Form View for Pelanggaran -->
+        <record id="view_form_pelanggaran" model="ir.ui.view">
+            <field name="name">pelanggaran.form</field>
+            <field name="model">pesantren.pelanggaran</field>
+            <field name="arch" type="xml">
+                <form string="Pelanggaran Santri">
+                    <sheet>
+                        <group>
+                            <field name="tanggal"/>
+                            <field name="siswa_id"/>
+                            <field name="kelas_id"/>
+                            <field name="data_pelanggaran_id"/>
+                            <field name="kategori_id"/>
+                            <field name="poin"/>
+                            <field name="deskripsi"/>
+                        </group>
+                        <group string="Hukuman dan Verifikasi">
+                            <field name="hukuman_ids"/>
+                            <field name="deskripsi_pelanggaran"/>
+                            <field name="diperiksa_id"/>
+                            <field name="catatan_ka_asrama_id"/>
+                            <field name="tgl_disetujui"/>
+                            <field name="usr_disetujui"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View for Pelanggaran -->
+        <record id="view_list_pelanggaran" model="ir.ui.view">
+            <field name="name">pelanggaran.list</field>
+            <field name="model">pesantren.pelanggaran</field>
+            <field name="arch" type="xml">
+                <list string="Pelanggaran Santri">
+                    <field name="tanggal"/>
+                    <field name="siswa_id"/>
+                    <field name="kelas_id"/>
+                    <field name="data_pelanggaran_id"/>
+                    <field name="kategori_id"/>
+                    <field name="poin"/>
+                    <field name="diperiksa_id"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Action for Pelanggaran -->
+        <record id="action_pelanggaran" model="ir.actions.act_window">
+            <field name="name">Pelanggaran Santri</field>
+            <field name="res_model">pesantren.pelanggaran</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" ref="view_list_pelanggaran"/>
+        </record>
+
+    </data>
+</odoo>

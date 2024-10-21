@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action Provinsi -->
+        <record id="action_provinsi" model="ir.actions.act_window">
+            <field name="name">Provinsi</field>
+            <field name="res_model">pesantren.provinsi</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Provinsi
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Kota -->
+        <record id="action_kota" model="ir.actions.act_window">
+            <field name="name">Kota</field>
+            <field name="res_model">pesantren.kota</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Kota
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Kecamatan -->
+        <record id="action_kecamatan" model="ir.actions.act_window">
+            <field name="name">Kecamatan</field>
+            <field name="res_model">pesantren.kecamatan</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data kecamatan
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Quran -->
+        <record id="action_quran" model="ir.actions.act_window">
+            <field name="name">Quran</field>
+            <field name="res_model">alquran.surah</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Quran
+                </p>
+            </field>
+        </record>
+
+        <!-- List Ayat -->
+        <record id="view_alquran_ayat_list" model="ir.ui.view">
+            <field name="name">alquran.ayat.list</field>
+            <field name="model">alquran.ayat</field>
+            <field name="arch" type="xml">
+                <list string="Data Ayat">
+                    <field name="number" />
+                    <field name="juz" />
+                    <field name="manzil" />
+                    <field name="ruku" />
+                    <field name="hizb" />
+                    <field name="halaman" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Action Hadist -->
+        <record id="action_hadist" model="ir.actions.act_window">
+            <field name="name">Daftar Hadist</field>
+            <field name="res_model">tahfidz.hadist</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data hadist
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Nilai Tahfidz -->
+        <record id="action_nilai" model="ir.actions.act_window">
+            <field name="name">Daftar Nilai</field>
+            <field name="res_model">tahfidz.nilai</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data nilai
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Sesi Tahfidz -->
+        <record id="action_sesi" model="ir.actions.act_window">
+            <field name="name">Daftar Sesi</field>
+            <field name="res_model">tahfidz.sesi</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data sesi
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Buku Tahsin -->
+        <record id="action_tahsin" model="ir.actions.act_window">
+            <field name="name">Buku Tahsin</field>
+            <field name="res_model">buku.tahsin</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data tahsin
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Mutabaah -->
+        <record id="action_mutabaah" model="ir.actions.act_window">
+            <field name="name">Mutabaah</field>
+            <field name="res_model">pesantren.mutabaah</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Mutabaah
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Action Mutabaah Kategory -->
+        <record id="action_mutabaah_kategory" model="ir.actions.act_window">
+            <field name="name">Mutabaah Kategory</field>
+            <field name="res_model">pesantren.mutabaah_kategory</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Mutabaah Kategory
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Action Mutabaah Sesi-->
+        <record id="action_mutabaah_sesi" model="ir.actions.act_window">
+            <field name="name">Mutabaah Sesi</field>
+            <field name="res_model">pesantren.mutabaah_sesi</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Mutabaah Sesi
+                </p>
+            </field>
+        </record>
+
+
+
+        <!-- Action Kamar -->
+        <record id="action_kamar" model="ir.actions.act_window">
+            <field name="name">Kamar</field>
+            <field name="res_model">pesantren.kamar</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Kamar
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Kelas -->
+        <record id="action_kelas" model="ir.actions.act_window">
+            <field name="name">Kelas</field>
+            <field name="res_model">ruang.kelas</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Kelas
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

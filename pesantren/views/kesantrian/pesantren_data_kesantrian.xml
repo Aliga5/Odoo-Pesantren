@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Action untuk membuka form view pesantren.santri -->
+        <record id="pesantren.action_santri" model="ir.actions.act_window">
+            <field name="name">Santri Form</field>
+            <field name="res_model">pesantren.santri</field>
+            <field name="view_mode">kanban,form,list</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                Buatlah data santri baru di sini.
+                </p>
+            </field>
+        </record>
+
+        <!-- Kanban view untuk pesantren.santri -->
+        <record id="view_kanban_pesantren_santri" model="ir.ui.view">
+            <field name="name">pesantren.santri.kanban</field>
+            <field name="model">pesantren.santri</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_small_column">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="o_kanban_record">
+                                <div class="row">
+                                    <div class="o_kanban_image">
+                                        <img t-att-src="'/web/image/pesantren.santri/' + record.id.raw_value + '/foto'" display="full"/>
+                                    </div>
+                                    <div class="oe_kanban_content">
+                                        <strong>
+                                            <field name="name"/>
+                                        </strong>
+                                        <div>
+                                            <field name="no_induk"/>
+                                        </div>
+                                        <div>
+                                            <field name="kelas_id"/>
+                                        </div>
+                                        <div>
+                                            <field name="city"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oe_button_box" name="button_box">
+                                    <button name="kanban_button_action" type="object" class="btn btn-success" string='Print KTS'/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+        <!-- Action untuk membuka form view pesantren.santri -->
+        <record id="pesantren.action_santri" model="ir.actions.act_window">
+            <field name="name">Santri Form</field>
+            <field name="res_model">pesantren.santri</field>
+            <field name="view_mode">kanban,form,list</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                Buatlah data santri baru di sini.
+                </p>
+            </field>
+        </record>
+
+        <!-- Form view untuk pesantren.santri -->
+        <record id="view_form_pesantren_santri" model="ir.ui.view">
+            <field name="name">pesantren.santri.form</field>
+            <field name="model">pesantren.santri</field>
+            <field name="arch" type="xml">
+                <form string="Santri">
+                    <sheet>
+                    <header>
+                    <div class="oe_title">
+                    <label for="name" class="oe_edit_only" string="Nama Lengkap Siswa"/>
+                    <h1><field name="name"/></h1>
+                    </div>
+                    <field name="foto" widget="image" class="oe_avatar" required="0"/>
+                    </header>
+                        <group>
+                            <group>
+                                <field name="birthdate" string="Tanggal Lahir" required="1"/>
+                                <field name="address" string="Alamat Rumah"/>
+                                <field name="provinsi_id" string="Provinsi"/>
+                                <field name="city" string="Kota" required="1"/>
+                            </group>
+                            <group>
+                                <field name="gender" string="Jenis Kelamin" required="1"/>
+                                <field name="phone" string="No. Telepon"/>
+                                <field name="email" string="Email"/>
+                                <field name="kelas_id" string="Kelas"/>
+                                <field name="kamar_id" string="Kamar"/>
+                                <field name="pengurus_id" string="Pengurus"/>
+                                <field name="status_aktif" string="Status Aktif"/>
+                            </group>
+                        </group>
+
+                        <!-- Additional tab for 'Wali Santri' -->
+                        <notebook>
+                            <page string="Informasi Siswa">
+                                <group string="Akademik">
+                                    <group>
+                                        <field name="no_induk" string="Nomor Induk" required="1"/>
+                                        <field name="siswa_ajaran"/>
+                                        <field name="jenjang"/>
+                                        <field name="bidang_jurusan"/>
+                                        <field name="kamar"/>
+                                        <field name="musyrif_pembina"/>
+                                        <field name="musyrif_pengganti"/>
+                                    </group>
+                                    <group>
+                                        <field name="nisn"/>
+                                        <field name="ruang_kelas"/>
+                                        <field name="tingkat"/>
+                                        <field name="kewarganegaraan"/>
+                                        <field name="halaqoh"/>
+                                        <field name="penanggung_jawab"/>
+                                        <field name="ustadz_pengganti"/>
+                                    </group>
+                                </group>
+                                <group string="Data Siswa">
+                                    <group>
+                                        <field name="nama_panggilan"/>
+                                        <field name="tanggal_lahir"/>
+                                        <field name="jenis_kelamin"/>
+                                        <field name="no_induk_keluarga"/>
+                                        <field name="jml_saudara_kandung"/>
+                                        <field name="hobi"/>
+                                    </group>
+                                    <group>
+                                        <field name="tempat_lahir"/>
+                                        <field name="golongan_darah"/>
+                                        <field name="agama"/>
+                                        <field name="anak_ke"/>
+                                        <field name="bahasa_sehari_hari"/>
+                                        <field name="cita_cita"/>
+                                    </group>
+                                </group>
+                                <group string="Pendidikan Sebelumnya">
+                                    <group>
+                                        <field name="asal_sekolah"/>
+                                        <field name="nama_kepala_sekolah"/>
+                                        <field name="status_sekolah_asal"/>
+                                    </group>
+                                    <group>
+                                        <field name="no_telp_sekolah_asal"/>
+                                        <field name="alamat_sekolah_asal"/>
+                                        <field name="prestasi_diraih"/>
+                                        <field name="bakat_siswa"/>
+                                    </group>
+                                </group>
+                                <group string="Nilai Raport">
+                                    <group>
+                                        <field name="nilai_rata_rata_raport_kelas"/>
+                                        <field name="raport_4_sd_smt_1"/>
+                                        <field name="raport_5_sd_smt_1"/>
+                                    </group>
+                                    <group>
+                                        <field name="raport_4_sd_smt_2"/>
+                                        <field name="raport_5_sd_smt_2"/>
+                                        <field name="baca_quran"/>
+                                    </group>
+                                </group>
+                                <group string="Uang Saku dan Dompet">
+                                    <field name="virtual_account"/>
+                                    <field name="no_va_uang_saku"/>
+                                </group>
+                            </page>
+                            <page string="Orang Tua">
+                                <group>
+                                    <field name="wali_id" string="Wali Santri"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action Guru -->
+        <record id="action_guru" model="ir.actions.act_window">
+            <field name="name">Guru</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Guru
+                </p>
+            </field>
+        </record>
+        
+        <!-- Action Pengurus -->
+        <record id="action_pengurus" model="ir.actions.act_window">
+            <field name="name">Pengurus</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Pengurus
+                </p>
+            </field>
+        </record>
+
+        <!-- Action Wali -->
+        <record id="action_wali" model="ir.actions.act_window">
+            <field name="name">Wali Santri</field>
+            <field name="res_model">pesantren.wali_santri</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+            Tambahkan data Wali
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,34 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-up,
+.card-down {
+    width: 450px;
+    border-radius: 15px;
+    height: 250px;
+    margin: 10px;
+    background-color: rgb(38, 102, 2);
+}
+
+.barcode {
+    height: 70px;
+    width: 70px;
+}
+
+.foto{
+    width: 80px;
+    height: 80px;
+}
+p{
+    margin: 0px;
+}
+.bio{
+    font-size: 11px;
+}
+.number{
+    font-family: monospace;
+    color: white;
+    letter-spacing: 7px;
+}
