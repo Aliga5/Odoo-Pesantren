@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Petugas Keamanan" id="pesantren_keamanan.menu_root">
+
+        <menuitem name="Perizinan" id="pesantren_keamanan.menu_1">
+            <menuitem name="Perizinan Santri" id="pesantren_keamanan.menu_1_list" parent="pesantren_keamanan.menu_1" action="pesantren_keamanan.action_window"/>
+            <menuitem name="Perizinan Disetujui" id="pesantren_keamanan" parent="pesantren_keamanan.menu_2" action="pesantren_keamanan.action_server"/>
+            <menuitem name="Perizinan Ditolak" id="pesantren_keamanan" parent="pesantren_keamanan.menu_2" action="pesantren_keamanan.action_server"/>
+            <menuitem name="Santri Keluar" id="pesantren_keamanan" parent="pesantren_keamanan.menu_2" action="pesantren_keamanan.action_server"/>
+        </menuitem>
+            <menuitem name="Santri Keluar" id="pesantren_keamanan" parent="pesantren_keamanan.menu_2" action="pesantren_keamanan.action_server"/>
+            <menuitem name="Santri Masuk" id="pesantren_keamanan" parent="pesantren_keamanan.menu_2" action="pesantren_keamanan.action_server"/>
+    </menuitem>
+</menuitem>
+</menuitem>
+</menuitem>
+</menuitem>
+
+<!-- menu categories -->
+
+<!-- actions -->
+
+
+</odoo>
